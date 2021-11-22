@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  server: 'http://localhost:3000/api',
+  server: 'https://injectronic-sistemas.uc.r.appspot.com/api',
   sessionName: 'cjfixit-session',
   multiSession: false,
   firebaseConfig: {

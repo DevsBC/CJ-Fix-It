@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { IProtocol } from 'src/app/interfaces/protocol.interface';
+import { IStep } from 'src/app/interfaces/step.interface';
 import DB from '../../db.json';
 @Component({
   selector: 'app-main-protocols',
@@ -8,10 +10,11 @@ import DB from '../../db.json';
 })
 export class MainProtocolsComponent implements OnInit {
 
-  protocols: any;
-  optionSelected: any;
-  step: any;
+  protocols: IProtocol[];
+  optionSelected!: IProtocol;
+  step!: IStep;
   index = 0;
+  
   constructor(private snackBar: MatSnackBar) {
     console.log(DB.protocols);
     this.protocols = DB.protocols;
@@ -20,7 +23,7 @@ export class MainProtocolsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectOption(option: any) {
+  selectOption(option: IProtocol) {
     this.optionSelected = option;
     this.step = option.troubleshooting[0];
   }
