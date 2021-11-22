@@ -1,0 +1,244 @@
+{
+    "protocols": [
+        {
+            "name": "ccd",
+            "troubleshooting": [
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "12-151551",
+                    "reference": "PCB",
+                    "description": "descripcion de algo"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Resetear",
+                    "partNumber": "12-1531551",
+                    "reference": "PCB",
+                    "description": "pues ahi dale un reset"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "3434-51",
+                    "reference": "CMD",
+                    "description": "mira carnal no sea si se arme"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "4566-34435551",
+                    "reference": "TDA",
+                    "description": "si llegaste hasta aqui es porque debes estar realmente desesperado"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "8993-dd",
+                    "reference": "FFH",
+                    "description": "Llegaste al punto sin retorno"
+                }
+            ]
+        },
+        {
+            "name": "can",
+            "troubleshooting": [
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "12-151551",
+                    "reference": "PCB",
+                    "description": "descripcion de algo"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Resetear",
+                    "partNumber": "12-1516551",
+                    "reference": "PCB",
+                    "description": "pues ahi dale un reset"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "3434-51",
+                    "reference": "CMD",
+                    "description": "mira carnal no sea si se arme"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "4566-34435551",
+                    "reference": "TDA",
+                    "description": "si llegaste hasta aqui es porque debes estar realmente desesperado"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "8993-dd",
+                    "reference": "FFH",
+                    "description": "Llegaste al punto sin retorno"
+                }
+            ]
+        },
+        {
+            "name": "j1850_vpw",
+            "troubleshooting": [
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "12-151551",
+                    "reference": "PCB",
+                    "description": "descripcion de algo"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Resetear",
+                    "partNumber": "12-15155781",
+                    "reference": "PCB",
+                    "description": "pues ahi dale un reset"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "3434-51",
+                    "reference": "CMD",
+                    "description": "mira carnal no sea si se arme"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "4566-34435551",
+                    "reference": "TDA",
+                    "description": "si llegaste hasta aqui es porque debes estar realmente desesperado"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "8993-dd",
+                    "reference": "FFH",
+                    "description": "Llegaste al punto sin retorno"
+                }
+            ]
+        },
+        {
+            "name": "iso",
+            "troubleshooting": [
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "12-151551",
+                    "reference": "PCB",
+                    "description": "descripcion de algo"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Resetear",
+                    "partNumber": "12-54",
+                    "reference": "PCB",
+                    "description": "pues ahi dale un reset"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "3434-51",
+                    "reference": "CMD",
+                    "description": "mira carnal no sea si se arme"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "4566-34435551",
+                    "reference": "TDA",
+                    "description": "si llegaste hasta aqui es porque debes estar realmente desesperado"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "8993-dd",
+                    "reference": "FFH",
+                    "description": "Llegaste al punto sin retorno"
+                }
+            ]
+        },
+        {
+            "name": "j1850_PWM",
+            "troubleshooting": [
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "12-151551",
+                    "reference": "PCB",
+                    "description": "descripcion de algo"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Resetear",
+                    "partNumber": "12-15141",
+                    "reference": "PCB",
+                    "description": "pues ahi dale un reset"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "3434-51",
+                    "reference": "CMD",
+                    "description": "mira carnal no sea si se arme"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "4566-34435551",
+                    "reference": "TDA",
+                    "description": "si llegaste hasta aqui es porque debes estar realmente desesperado"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "8993-dd",
+                    "reference": "FFH",
+                    "description": "Llegaste al punto sin retorno"
+                }
+            ]
+        },
+        {
+            "name": "sci",
+            "troubleshooting": [
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "12-151551",
+                    "reference": "PCB",
+                    "description": "descripcion de algo"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Resetear",
+                    "partNumber": "12-14351",
+                    "reference": "PCB",
+                    "description": "pues ahi dale un reset"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "3434-51",
+                    "reference": "CMD",
+                    "description": "mira carnal no sea si se arme"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "4566-34435551",
+                    "reference": "TDA",
+                    "description": "si llegaste hasta aqui es porque debes estar realmente desesperado"
+                },
+                {
+                    "img": "./assets/images/pcb.png",
+                    "action": "Reemplazar",
+                    "partNumber": "8993-dd",
+                    "reference": "FFH",
+                    "description": "Llegaste al punto sin retorno"
+                }
+            ]
+        }
+    ]
+}

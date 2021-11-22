@@ -1,0 +1,132 @@
+
+<ng-container *ngIf="ready">
+  <mat-sidenav-container class="sidenav-container" *ngIf="isAdmin">
+ 
+
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="true" fixedTopGap="0" fixedBottomGap="0" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+        <mat-toolbar color="primary">
+            <h2>Menu de Administración</h2>
+            <span class="spacer"></span>
+            <ng-container *ngIf="drawer.mode === 'over'">
+              <button mat-icon-button (click)="drawer.toggle()" class="animate__animated animate__rotateIn" *ngIf="drawer.opened">
+                <mat-icon>close</mat-icon>
+              </button>
+            </ng-container>
+        </mat-toolbar>
+        <mat-list>
+          <mat-list-item>
+            <ng-container>
+              <button mat-button [matMenuTriggerFor]="menu">
+                <mat-icon>unfold_more</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                  <button mat-menu-item (click)="openProfile()">
+                      <mat-icon>portrait</mat-icon>
+                      <span>Perfil</span>
+                  </button>
+                  <button mat-menu-item>
+                      <mat-icon>settings</mat-icon>
+                      <span>Configuracion</span>
+                  </button>
+              </mat-menu>
+            </ng-container>
+            <h4 mat-line>Hola {{ session?.fullName || 'Desconocido (actualiza tus datos)' }}</h4>
+            <p mat-line> {{ session.email }}</p>
+          </mat-list-item>
+       </mat-list>
+        <mat-divider></mat-divider>
+        <mat-nav-list  (click)="(drawer.mode === 'over') && drawer.toggle()">
+          <mat-expansion-panel class="mat-elevation-z0" [expanded]="true">
+            <mat-expansion-panel-header>
+              Principal
+            </mat-expansion-panel-header>
+            <mat-nav-list dense>
+              <mat-list-item routerLink="/cms/home" [routerLinkActive]="theme" >
+                <mat-icon mat-list-icon>home</mat-icon>
+                <h4 mat-line>Inicio</h4>
+              </mat-list-item>
+            </mat-nav-list>
+          </mat-expansion-panel>
+          <mat-expansion-panel class="mat-elevation-z0" *ngIf="'content_admin' | permission | async">
+            <mat-expansion-panel-header>
+              Contenido
+            </mat-expansion-panel-header>
+            <mat-nav-list dense>
+              <mat-list-item routerLink="/cms/library" [routerLinkActive]="theme">
+                <mat-icon mat-list-icon>collections</mat-icon>
+                <h4 mat-line>Libreria</h4>
+              </mat-list-item>
+            </mat-nav-list>
+          </mat-expansion-panel>
+          <mat-expansion-panel class="mat-elevation-z0" *ngIf="'section_admin' | permission | async">
+            <mat-expansion-panel-header>
+              Secciones
+            </mat-expansion-panel-header>
+            <mat-nav-list dense>
+              <mat-list-item routerLink="/cms/slider" [routerLinkActive]="theme">
+                <mat-icon mat-list-icon>recent_actors</mat-icon>
+                <h4 mat-line>Slider Principal</h4>
+              </mat-list-item>
+              <mat-list-item routerLink="/cms/intro" [routerLinkActive]="theme">
+                <mat-icon mat-list-icon>layers</mat-icon>
+                <h4 mat-line>Intro</h4>
+              </mat-list-item>
+              <mat-list-item routerLink="/cms/about" [routerLinkActive]="theme">
+                  <mat-icon mat-list-icon>group</mat-icon>
+                  <h4 mat-line>Nosotros</h4>
+              </mat-list-item>
+            </mat-nav-list>
+          </mat-expansion-panel>
+          <mat-expansion-panel class="mat-elevation-z0" dense *ngIf="'store_admin' | permission | async">
+            <mat-expansion-panel-header>
+              Tienda
+            </mat-expansion-panel-header>
+            <mat-nav-list dense>
+              <mat-list-item routerLink="/cms/orders" [routerLinkActive]="theme">
+                <mat-icon mat-list-icon>fact_check</mat-icon>
+                <h4 mat-line>Ordenes</h4>
+              </mat-list-item>
+              <mat-list-item routerLink="/cms/products" [routerLinkActive]="theme">
+                <mat-icon mat-list-icon>category</mat-icon>
+                <h4 mat-line>Productos</h4>
+              </mat-list-item>
+            </mat-nav-list>
+          </mat-expansion-panel>                
+        </mat-nav-list>
+    </mat-sidenav>
+    
+    <mat-sidenav-content fxLayout="column">
+        <mat-toolbar class="position-fixed" color="primary">
+         
+            <mat-toolbar-row>
+                <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+                    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+                </button>
+                <span>Injectronic</span>                
+                <span class="spacer"></span>
+                <mat-slide-toggle labelPosition="before" [checked]="mode === 'test'" (change)="toggleMode($event)" >Test mode</mat-slide-toggle>
+                <span class="spacer"></span>
+                <app-color-menu [options]="options" (themeChange)="themeChangeHandler($event)"></app-color-menu>
+                <button mat-icon-button (click)="dialogSignOut()">
+                   <mat-icon>exit_to_app</mat-icon>
+                 </button>
+            </mat-toolbar-row>
+
+        </mat-toolbar>
+
+        <!--MAIN CONTENT-->
+        <router-outlet></router-outlet>
+
+        <mat-toolbar color="primary" fxFlexOffset="auto">
+            <span class='spacer'></span>
+            <h3>© Injectronic 2021</h3>
+            <span class='spacer'></span>
+        </mat-toolbar>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <h3>Alto ahi amiguito!!</h3>
+  <h1>Acceso Restringido</h1>
+  <a mat-button  color="primary" href="/main/home">Oh, bueno, he de volver</a>
+</ng-container>
+

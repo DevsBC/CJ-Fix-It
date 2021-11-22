@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+  
+mat-card {
+    width: 90%;
+    margin: auto;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    padding: 10px;
+}

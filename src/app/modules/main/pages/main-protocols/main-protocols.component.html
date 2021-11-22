@@ -1,0 +1,45 @@
+<mat-drawer-container style="height: 100%;" autosize>
+    <mat-drawer mode="side" opened style="padding-right: 10px;">
+        <mat-nav-list>
+            <mat-list-item [class]="(optionSelected?.name === option.name) ? 'active': ''" (click)="selectOption(option)" *ngFor="let option of protocols">
+                <h4 mat-line>{{ option.name }}</h4>
+            </mat-list-item>
+        </mat-nav-list> 
+    </mat-drawer>
+    <mat-drawer-content fxLayout.gt-sm="column">
+        <ng-container *ngIf="optionSelected">
+            <h2 style="text-align: center;">PROTOCOLO {{ optionSelected.name | uppercase }}</h2>
+            <div fxLayout="row" fxLayout.lt-md="column">
+                <img fxFlex="60" fxFlex.lt-md="100" [src]="step.img" style="padding: 20px;">
+                <div fxLayout="column" fxFlex="30">
+                    <mat-list fxFlex style="overflow: auto; height: 400px;">
+                        <mat-list-item><b>Accion: </b> {{ step.action }}</mat-list-item>
+                        <mat-list-item><b>No. Parte: </b> {{ step.partNumber }}</mat-list-item>
+                        <mat-list-item><b>Referencia: </b> {{ step.reference }}</mat-list-item>
+                        <mat-list-item><b>Descripcion: </b> {{ step.description }}</mat-list-item>
+                    </mat-list>
+                    <div fxFlex>
+                        <mat-card style="width: 90%; margin: auto;">
+                            <mat-card-header>
+                                <mat-card-title>Se soluciono la falla?</mat-card-title>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <button mat-raised-button color="primary" (click)="repair(true)">Si</button>
+                                <div fxFlex></div>
+                                <button mat-raised-button color="warn" (click)="repair(false)">No</button>
+                            </mat-card-content>
+                            <mat-card-actions>
+                                <button mat-stroked-button style="width: 100%;" (click)="help()">Ayuda</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="!optionSelected">
+            <mat-card>
+                <h2 style="text-align: center;">Seleccionar el protocolo que desea diagnosticar</h2>
+            </mat-card>
+        </ng-container>
+    </mat-drawer-content>
+</mat-drawer-container>

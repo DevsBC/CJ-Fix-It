@@ -1,0 +1,6 @@
+<div class="mat-elevation-z8" style="width: 80%; margin: auto;" >
+    <div fxLayout="column">
+        <img mat-card-image src="https://storage.googleapis.com/injectronic_apps/injectronic-pagina/main/logo-injectronic.png"  style="width: 30%; margin: auto;">
+        <a mat-button *ngFor="let opt of options" (click)="goTo(opt)">{{ opt.title}}</a>
+    </div>
+</div>

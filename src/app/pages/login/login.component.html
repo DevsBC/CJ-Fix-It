@@ -1,0 +1,55 @@
+<mat-toolbar style="background-color: white; padding-top: 35px;">
+    <mat-toolbar-row style="padding-bottom: 5px;">
+      <span class="spacer"></span>
+      <a href="/main/home"><img  src="https://storage.googleapis.com/injectronic_apps/injectronic-pagina/main/logo-injectronic.png"></a>
+      <span class="spacer"></span>  
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+<mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+<mat-card class="mat-elevation-z8" style="margin-top: 20px;">
+    <mat-tab-group mat-align-tabs="start" mat-stretch-tabs>
+        <mat-tab [label]="strings.signin[lang]">
+            <h2 class="title">{{ strings.enteraccount[lang] }}</h2>
+            <form (ngSubmit)="onSubmitLogin(loginForm)" #loginForm="ngForm">
+                <mat-form-field>
+                    <mat-label>{{ strings.email[lang] }} </mat-label>
+                    <input matInput type="email" name="email" [(ngModel)]="user.email" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>{{ strings.password[lang] }}</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="user.password" required>
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </mat-form-field>
+                <button mat-flat-button color="primary" type="submit" style="width: 100%;" [disabled]="loading">{{ strings.enter[lang] }}</button>
+            </form>
+        </mat-tab>
+        <mat-tab [label]="strings.signup[lang]">
+            <h2 class="title">{{ strings.createaccount[lang] }}</h2>
+            <form (ngSubmit)="onSubmitRegister(registerForm)" #registerForm="ngForm">
+                <mat-form-field>
+                    <mat-label>{{ strings.fullname[lang] }}</mat-label>
+                    <input matInput type="text" name="fullName" [(ngModel)]="user.fullName" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>{{ strings.email[lang] }}</mat-label>
+                    <input matInput type="email" name="email" [(ngModel)]="user.email" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>{{ strings.telephone[lang] }}</mat-label>
+                    <input matInput type="tel" name="telephone" [(ngModel)]="user.telephone" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>{{ strings.password[lang] }}</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="user.password" required>
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </mat-form-field>
+                <button mat-flat-button color="accent" style="width: 100%;" type="submit" [disabled]="loading">{{ strings.create[lang] }}
+                </button>
+            </form>
+        </mat-tab>
+    
+      </mat-tab-group>
+</mat-card>
+  
+  

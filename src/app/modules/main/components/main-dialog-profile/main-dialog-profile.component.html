@@ -1,0 +1,14 @@
+<div >
+    <div style="text-align: center;">
+        <img mat-card-avatar src="https://365psd.com/images/istock/previews/1009/100996291-male-avatar-profile-picture-vector.jpg" width="110">
+        <h2>{{ session?.fullName }}</h2>
+        <p>{{ session?.telephone }}</p>
+        <p>{{ session?.email }}</p>
+    </div>
+
+    <mat-divider style="padding-bottom: 20px;"></mat-divider>
+
+    <button mat-stroked-button style="width: 100%;" (click)="logout()">Cerrar sesion</button>
+</div>
+
+   
